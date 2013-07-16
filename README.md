@@ -36,7 +36,7 @@ Examples
             // Point to a table you have in the DOM
             var table = new AJAXTable.Table('js-table');
             
-            // Update the row with tie id "one"
+            // Update the row with the id "one"
             var row = new AJAXTable.Row('one');
             row.addCell(new AJAXTable.Cell('new id'));
             row.addCell(new AJAXTable.Cell('new value'));
