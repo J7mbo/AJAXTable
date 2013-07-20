@@ -24,7 +24,7 @@ var AJAXTable = {};
         this.id = id;
         this.rows = [];
       
-        if ($table.length === 0|| $body.length === 0)
+        if ($table.length === 0 || $body.length === 0)
         {
             throw new AJAXTable["Null" + (($table === null) ? 'Table' : 'Body') + "Exception"](id);
         }
@@ -72,7 +72,7 @@ var AJAXTable = {};
     {
         if (!(cell instanceof AJAXTable.Cell))
         {
-            throw new NullCellException("addCell() requires instance of TableManager.Cell");
+            throw new NullCellException("addCell() requires instance of AJAXTable.Cell");
         }
 
         this.content.setAttribute("id", this.id);
@@ -89,7 +89,7 @@ var AJAXTable = {};
         
         if (!(row instanceof AJAXTable.Row))
         {
-            throw new NullRowException("addRow() requires instance of TableManager.Row");
+            throw new NullRowException("addRow() requires instance of AJAXTable.Row");
         }
       
         var currentcellcount = this.rows[0].cells.length;
@@ -138,7 +138,6 @@ var AJAXTable = {};
 
             $.each(row.cells, function(k, cell)
             {
-
                 var internalcellcontents = cell.content.innerText;
                 var replacementcontents = null;
 
@@ -159,8 +158,6 @@ var AJAXTable = {};
                         return;
                     }
                 });
-              
-                
             });
         });
      
